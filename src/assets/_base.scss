@@ -1,0 +1,50 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+a{
+     text-decoration: none;
+}
+li{
+ list-style: none;
+}
+
+
+.col-3{
+     width: 25%;
+}
+
+.col-9{
+     width: 75%;
+     margin: 0 24px;
+}
+body{
+     background-color:#F2F2F2;
+     font-family: "Roboto", sans-serif;
+}
+.sidebar{
+     background-color: #fff;
+     height: 100vh;
+}
+.row{
+     display: flex;
+     flex-wrap: wrap;
+}
+.form{
+     display: flex;
+     justify-content: space-between;
+}
+.user__avatar{
+     border-radius: 100%;
+     width: 32px;
+     height: 32px;
+}
+.manage{
+     &__users{
+          background-color: white;
+     }
+}
+.flex{
+     display: flex;
+}

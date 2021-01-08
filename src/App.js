@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/header';
+import Sidebar from './components/sidebar';
+import Manage from './pages/manage/index';
+import Products from './pages/products';
+import Dashboard from './pages/dashboard';
+import axios from 'axios';
+import {Route} from 'react-router-dom';
 
-function App() {
+
+function App () {
   return (
+   
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Header  />
+    <Sidebar /> 
+    <Route  exact  path="/Dashboard" component={Dashboard}/>
+    <Route  path="/media" component={Manage}/>
+    <Route  path="/products" component={Products}/>
+</div>
+   
+   
+   
+   
   );
 }
 
 export default App;
+
+
