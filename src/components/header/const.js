@@ -1,4 +1,4 @@
-import icon1 from '../../img/icon-1.svg';
-import icon2 from '../../img/icon-2.svg';
+import icon1 from '../../assets/bell.svg';
+import icon2 from '../../assets/logout.svg';
 
-export const icons=[icon1,icon2];
+export const navItems = [icon1, icon2];

@@ -1,15 +1,21 @@
-import React from 'react'; 
+import React from 'react';
+import Items from './items';
 import Logo from './logo';
-import Icons from  './icon';
 import './style.scss';
 
-
-const Header = ()  => { 
- return(
-     <div class="container">
-       <div className="header__logo"> <Logo /> </div>
-       <div className="header__icons"> <Icons /></div>
-     </div>
- )
+const Header = () => {
+  return (
+    <header className='header'>
+      <div className='container'>
+        <div className='header__row'>
+          <Logo />
+          <div className='header__nav'>
+            <Items />
+          </div>
+        </div>
+      </div>
+    </header>
+  );
 };
+
 export default Header;

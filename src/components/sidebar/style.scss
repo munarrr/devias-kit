@@ -1,9 +1,13 @@
-@import '../global';
+@import "../global";
 
 .sidebar {
+	position: absolute;
+	left: 0;
+	top: 64px;
+	z-index: 1;
 	width: 270px;
 	height: 100%;
-	padding: 0 12px;
+	padding: 0 16px;
 	background-color: $color-white;
 	box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
 	svg {
@@ -13,7 +17,7 @@
 		transition: 0.2s;
 	}
 	&__top {
-		padding: 20px 14px;
+		padding: 24px 16px;
 		text-align: center;
 	}
 	&__name {
@@ -21,6 +25,11 @@
 		margin: 16px 0 4px;
 		letter-spacing: -0.05px;
 		color: $color-black;
+	}
+	&__position {
+		@include font(12px);
+		color: $color-gray;
+		text-align: center;
 	}
 	&__nav {
 		padding: 10px 0;
@@ -55,7 +64,7 @@
 			margin-left: 8px;
 		}
 	}
-	.bottom {
+	&__support {
 		@include font(12px, 500);
 		display: flex;
 		flex-direction: column;
@@ -65,7 +74,7 @@
 			margin-top: 10px;
 			display: flex;
 			align-items: center;
-			&__title{
+			span {
 				@include font(14px, 500);
 				letter-spacing: -0.05px;
 				color: $color-darkGray;

@@ -1,41 +1,9 @@
 import React from 'react';
 import './style.scss';
-import { makeStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import AddOutlinedIcon from '@material-ui/icons/AddOutlined';
-
-const useStyles = makeStyles((theme) => ({
-  plusIcon: {
-    margin: '0 10px 0 0',
-  },
-  color: {
-    backgroundColor: '#47B881',
-    color: '#fff'
-  }
-}));
-
-export function PrimaryBtn({ text, handleClickModal }) {
-  const classes = useStyles();
-  return (
-    <Button onClick={handleClickModal} variant='contained' color='primary'>
-      <AddOutlinedIcon className={classes.plusIcon} />
-      {text}
-    </Button>
-  );
-}
-
-export function GreenBtn({ text, handleClickModal }) {
-  const classes = useStyles();
-  return (
-    <Button onClick={handleClickModal} className={classes.color} variant='contained' >
-      {text}
-    </Button>
-  );
-}
 
 export const BtnGoBack = () => {
   return (
-    <button className='btn-back'>
+    <button className="btn-back">
       <svg
         width='18'
         height='14'

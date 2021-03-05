@@ -1,17 +1,29 @@
-import React from 'react'
-import Top from './top';
-import Middle from './middle';
-import Bottom from './bottom';
+import React from 'react';
+import userImg from '../../assets/user.png';
+import Support from '../../assets/support.svg';
+import Nav from './nav';
+import './style.scss';
 
-function Sidebar() {
-     return (
-          <div className="sidebar col-3">
-               <div className="sidebar__top"><Top /></div>
-               <div className="sidebar__middle"><hr /><Middle /><hr /></div>
-               <div className="sidebar__bottom"><Bottom /></div>
-          </div>
-     )
-}
+const Sidebar = () => {
+  return (
+    <aside className='sidebar'>
+      <div className='sidebar__top'>
+        <img src={userImg} alt='user' className='sidebar__avatar'></img>
+        <h3 className='sidebar__name'>Roman Kutepov</h3>
+        <span className='sidebar__position'>Brain Director</span>
+      </div>
+      <hr />
+      <Nav />
+      <hr />
+      <div className='sidebar__support'>
+        <span>Support</span>
+        <a href='#'>
+          <img src={Support} alt='support' />
+          <span>Support</span>
+        </a>
+      </div>
+    </aside>
+  );
+};
 
 export default Sidebar;
-
