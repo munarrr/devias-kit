@@ -15,6 +15,7 @@ const Nav = () => {
         {navItems.map((item, index) => {
           return (
             <li
+            key={item + index}
               onClick={() => handleClick(index)}
               className={`sidebar__item ${itemActive === index ? 'is-active' : ''}`}>
               <Link className='sidebar__link' to={item.link}>

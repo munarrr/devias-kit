@@ -1,8 +1,9 @@
 import React from 'react';
 import './style.scss';
 
+
 export const BtnGoBack = () => {
-  return (
+  return (    
     <button className="btn-back">
       <svg
         width='18'
@@ -20,4 +21,5 @@ export const BtnGoBack = () => {
   );
 };
 
-export const btn = () => {};
+
+

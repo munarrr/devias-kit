@@ -1,5 +1,5 @@
 {
-     "users": [
+     "users" : [
        {
                   "id": 0,
                   "avatar": "https://avatars1.githubusercontent.com/u/73682291?s=460&u=ded808afefc0c24d3ed72571f0d33682e4b09484&v=4",
@@ -82,8 +82,36 @@
                   "dateOfRegistry": "04/1/2011"
              
        }
-        ]
+        ],
+        
+       "cards": [
+     {
+          "title": "Dropbox",
+          "text": "Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud."
+          
+     },
+     {
+          "title": "Medium Corporation",
+          "text": "Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud."
+
+     },
+     {
+          "title": "Slack",
+          "text": "Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud."
+
+     },
+     {
+          "title": "Lyft",
+          "text": "Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud."
+
+     }
+     ]
+
+
+
 }
+
+
 
 
 

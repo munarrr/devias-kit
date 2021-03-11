@@ -2,7 +2,7 @@ import React from 'react';
 import plus from '../../assets/plus-symbol.svg';
 import './style.scss';
 import Item from './item';
-import { BtnGoBack } from '../../components/btns/index';
+import {BtnGoBack} from '../../components/btns/index';
 import axios from 'axios';
 
 const Manage = () => {
@@ -21,6 +21,7 @@ const Manage = () => {
   const handleClick = () => {
     setActiveModal(activeModal ? false : true);
   };
+ 
 
   const saveData = (event) => {
     setNewUser({
@@ -59,8 +60,8 @@ const Manage = () => {
     <section className='manage'>
       {activeModal && (
         <div className='modal'>
-          <div>
-            <BtnGoBack />
+          <div className="modal__body">
+            <BtnGoBack onClick={ClickModal}/>
             <h3 className="modal__title">Create a new user</h3>
             <h6 className="modal__suptitle">Add main information about user</h6>
             <form className="modal__form" onSubmit={(event) => handleSubmit(event)}>
