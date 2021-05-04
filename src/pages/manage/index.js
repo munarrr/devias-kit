@@ -1,10 +1,13 @@
 import React from 'react';
 import plus from '../../assets/plus-symbol.svg';
 import './style.scss';
+import Modal from 'react-modal'
 import Item from './item';
-import {BtnGoBack} from '../../components/btns/index';
+// import {BtnGoBack} from '../../components/btns/index';
 import axios from 'axios';
 
+
+Modal.setAppElement('#root')
 const Manage = () => {
   const [usersData, setUsersData] = React.useState([]);
   const [newUser, setNewUser] = React.useState({
@@ -19,7 +22,7 @@ const Manage = () => {
   const [activeModal, setActiveModal] = React.useState(false);
 
   const handleClick = () => {
-    setActiveModal(activeModal ? false : true);
+    setActiveModal(true);
   };
  
 
@@ -58,10 +61,14 @@ const Manage = () => {
 
   return (
     <section className='manage'>
-      {activeModal && (
+     <Modal 
+      isopen={false} 
+        onRequestClose={() => {setActiveModal(false)}}
+        contentLabel="Minimal Modal Example">
+
         <div className='modal'>
           <div className="modal__body">
-            <BtnGoBack onClick={ClickModal}/>
+            {/* <BtnGoBack onClick={ClickModal}/> */}
             <h3 className="modal__title">Create a new user</h3>
             <h6 className="modal__suptitle">Add main information about user</h6>
             <form className="modal__form" onSubmit={(event) => handleSubmit(event)}>
@@ -99,7 +106,7 @@ const Manage = () => {
             </form>
           </div>
         </div>
-      )}
+      </Modal>
       <div className='manage__top'>
         <div className='row'>
           <div className='manage__filter'>Filter</div>
@@ -107,19 +114,21 @@ const Manage = () => {
             <input type='text' placeholder='Search users by name, id' />
           </label>
         </div>
-        <button onClick={handleClick} className='manage__add-user'>
+        <button onClick={() => handleClick} className='manage__add-user'>
           <img src={plus} alt='plus' />
           ADD USER
         </button>
       </div>
       <table className='manage__users'>
+        <tbody>
         <tr className='manage__row'>
-          <th className='col-3 manage__headers'>Selected 2 users</th>
-          <th className='col-3 manage__headers'>User ID</th>
-          <th className='col-3 manage__headers'>Phone Number</th>
-          <th className='col-3 manage__headers'>Email Address</th>
-          <th className='col-1 manage__headers'>Account Created</th>
+         <td className='col-3 manage__headers'>Selected 2 users</td>
+         <td className='col-3 manage__headers'>User ID</td>
+         <td className='col-3 manage__headers'>Phone Number</td>
+         <td  className='col-3 manage__headers'>Email Address</td>
+         <td className='col-1 manage__headers'>Account Created</td>
         </tr>
+          </tbody>
         <Item users={usersData} />
       </table>
     </section>
@@ -127,3 +136,12 @@ const Manage = () => {
 };
 
 export default Manage;
+
+{/* <table style={tableStyle}>
+  <tbody>
+    <tr style={rowStyle}>
+      <td style={leftColumnStyle}>Battery</td>
+      <td><StatsBar /></td>
+    </tr>
+  </tbody>
+</table> */}

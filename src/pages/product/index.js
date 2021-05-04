@@ -1,7 +1,5 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
-import Bacgrand from '../../assets/product.png'
-import Card from '../../assets/product-card.png'
 import './product.scss'
 import axios from 'axios'
 
@@ -77,7 +75,6 @@ const Product = () => {
           </div>
          
                )}
-               <img className="product__img" src={Bacgrand} alt="poto" />
                <label className='manage__search'>
                     <input type='text' placeholder='Search users by name, id' />
                </label>
@@ -88,7 +85,6 @@ const Product = () => {
                    {products.map((item,index) => {
                           return (
                                <div className="product__item" key={item + index}>
-                               <img className="product__img" src={Card} alt="cards-product" />
                                     <h3 className="poduct__title">{item.title}</h3>
                                     <p className="product__text">{item.text}</p>
                                <div className="product__card-footer">

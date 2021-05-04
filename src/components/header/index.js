@@ -1,5 +1,5 @@
 import React from 'react';
-import Items from './items';
+import Item from './items';
 import Logo from './logo';
 import './style.scss';
 
@@ -10,7 +10,7 @@ const Header = () => {
         <div className='header__row'>
           <Logo />
           <div className='header__nav'>
-            <Items />
+            <Item />
           </div>
         </div>
       </div>
