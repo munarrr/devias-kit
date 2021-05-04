@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      hi
       <Sidebar />
       <Manage />
       <Route path="/" components={Manage} />
